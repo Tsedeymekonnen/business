@@ -4,7 +4,38 @@
 	<title>XO Computer</title>
 	<link rel="stylesheet" type="text/css" href="../css/home.css">
     <link rel="stylesheet" type="text/css" href="../css/gallarystyl.css">
-    <style> body{
+	     <script>
+            function search() {
+            let input = document.getElementById('query').value
+            input=input.toLowerCase();
+            let x = document.getElementsByClassName('searchable');
+
+            for (i = 0; i < x.length; i++) {
+            if (!x[i].innerHTML.toLowerCase().includes(input)) {
+            x[i].style.display="none";
+            }
+            else {
+            x[i].style.display="list-item";
+            }
+            }
+            }
+    </script>
+    <script >
+         function openNav(){
+            document.getElementById("sideNav").style.width="18%";
+            //document.body.style.marginLeft="18%";
+            document.body.style.backgroundColor="rgba(0,0,0,0.7)";
+        }
+         function closeNav(){
+            document.getElementById("sideNav").style.width="0";
+            document.body.style.marginLeft="0";
+            document.body.style.backgroundColor="white";
+        }
+
+
+    </script>
+    <style> 
+	    body{
 font-family:"Lato", sans-serif;
 transition:background-color .5s;
 
